@@ -49,7 +49,7 @@ block content
                   tr
                     td #{lost.itemCategory}
                     td #{lost.itemName}
-                    td #{lost.itemTime.getFullYear()}-#{lost.itemTime.getMonth()}-#{lost.itemTime.getDate()}
+                    td #{lost.itemTime.getFullYear()}-#{lost.itemTime.getMonth()+1}-#{lost.itemTime.getDate()}
                     td #{lost.itemPlace}
                     td
                       a(href='/post/#{lost._id}')
@@ -75,7 +75,7 @@ block content
                   tr
                     td #{found.itemCategory}
                     td #{found.itemName}
-                    td #{found.itemTime.getFullYear()}-#{found.itemTime.getMonth()}-#{found.itemTime.getDate()}
+                    td #{found.itemTime.getFullYear()}-#{found.itemTime.getMonth()+1}-#{found.itemTime.getDate()}
                     td #{found.itemPlace}
                     td
                       a(href='/post/#{found._id}')

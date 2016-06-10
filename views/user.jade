@@ -16,7 +16,7 @@ block content
               div.col-sm-10.col-xs-10
                 p
                   a(href='/user/#{thisUser._id}') #{thisUser.name}
-                  |  于 #{thisUser.createTime.getFullYear()}-#{thisUser.createTime.getMonth()}-#{thisUser.createTime.getDate()} 加入 中大失物招领
+                  |  于 #{thisUser.createTime.getFullYear()}-#{thisUser.createTime.getMonth()+1}-#{thisUser.createTime.getDate()} 加入 中大失物招领
                 table.table
                   tr
                     th 昵称
@@ -60,7 +60,7 @@ block content
                       else
                         | 寻物信息
                     td #{post.itemName}
-                    td #{post.itemTime.getFullYear()}-#{post.itemTime.getMonth()}-#{post.itemTime.getDate()}
+                    td #{post.itemTime.getFullYear()}-#{post.itemTime.getMonth()+1}-#{post.itemTime.getDate()}
                     td #{post.itemPlace}
                     td
                       a(href='/post/#{post._id}')

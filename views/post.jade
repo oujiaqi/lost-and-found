@@ -19,7 +19,7 @@ block content
               div.col-sm-10.col-xs-10
                 p
                   a(href='/user/#{post.uid}') #{post.author.name}
-                  |  于 #{post.startTime.getFullYear()}-#{post.startTime.getMonth()}-#{post.startTime.getDate()} 发布
+                  |  于 #{post.startTime.getFullYear()}-#{post.startTime.getMonth()+1}-#{post.startTime.getDate()} 发布
                 table.table
                   tr
                     th 类别
@@ -29,7 +29,7 @@ block content
                     td #{post.itemName}
                   tr
                     th 时间
-                    td #{post.itemTime.getFullYear()}-#{post.itemTime.getMonth()}-#{post.itemTime.getDate()}
+                    td #{post.itemTime.getFullYear()}-#{post.itemTime.getMonth()+1}-#{post.itemTime.getDate()}
                   tr
                     th 地点
                     td #{post.itemPlace}
@@ -58,7 +58,7 @@ block content
                         p #{comment.content}
                         p
                           small
-                            | #{comment.createTime.getFullYear()}-#{comment.createTime.getMonth()}-#{comment.createTime.getDate()} 发表评论
+                            | #{comment.createTime.getFullYear()}-#{comment.createTime.getMonth()+1}-#{comment.createTime.getDate()} 发表评论
                   hr
             
             div.row

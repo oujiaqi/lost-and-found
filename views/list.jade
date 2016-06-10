@@ -21,7 +21,7 @@ block content
                   tr
                     td #{post.itemCategory}
                     td #{post.itemName}
-                    td #{post.itemTime.getFullYear()}-#{post.itemTime.getMonth()}-#{post.itemTime.getDate()}
+                    td #{post.itemTime.getFullYear()}-#{post.itemTime.getMonth()+1}-#{post.itemTime.getDate()}
                     td #{post.itemPlace}
                     td
                       a(href='/post/#{post._id}')
