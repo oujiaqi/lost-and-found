@@ -12,7 +12,6 @@ module.exports = function(app) {
 
     app.post('/search', function(req, res) {
         var keywords = req.body['keywords'];
-        console.log(keywords);
         Post.getPosts({
             $or: [{itemName: {$regex: keywords, $options: '$i'}}, 
             {itemCategory: {$regex: keywords, $options: '$i'}}, 

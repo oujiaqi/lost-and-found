@@ -109,7 +109,7 @@ module.exports = function(app) {
         var pid = parseInt(req.params.id);
         Post.getPosts({_id: pid}, {}, function(err, posts) {
             if (err || posts.length == 0) {
-                return res.redirect('back');
+                return res.redirect('/');
             }
             var uid = parseInt(posts[0].uid);
             User.getUsers({_id: uid}, {}, function(err, users) {
@@ -165,8 +165,8 @@ module.exports = function(app) {
             return res.send({login: false});
         }
         var newComment = {};
-        newComment.pid = req.session.user._id;
-        newComment.uid = parseInt(req.body['uid']);
+        newComment.pid = parseInt(req.body['pid']);
+        newComment.uid = req.session.user._id;
         newComment.content = req.body['content'];
         Comment.addComment(newComment, function(err, result) {
             if(err) {

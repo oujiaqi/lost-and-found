@@ -1,3 +1,5 @@
+require('events').EventEmitter.prototype._maxListeners = 200;
+
 var express = require('express');
 var app = express();
 var routes = require('./routes/index');
