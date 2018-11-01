@@ -67,7 +67,6 @@ $(document).ready(function(){
                         $postMessage.click();
                     }, 2000);
                 } else if (!data.success) {
-                    alert(data.login);
                     $postMessage.attr('data-content', '评论失败，请重试！');
                     $postMessage.click();
                     setTimeout(function() {
